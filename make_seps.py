@@ -1,14 +1,5 @@
 #!/usr/bin/env python3
 """
-make_seps.py -- derive the Socio-Economic Planning Sciences variant of the manuscript
-from the EJOR master, so the two never drift apart.
-
-The two journals differ in exactly two respects that touch the source:
-  * EJOR uses author-year (Harvard) references  -> elsarticle option `authoryear`,
-    bibliography style `elsarticle-harv`;
-  * SEPS uses numbered references               -> elsarticle option `number`,
-    bibliography style `elsarticle-num`.
-The journal name in \\journal{} is also changed.
 
 Usage:  python make_seps.py [--manuscript ../manuscript]
 
@@ -24,7 +15,6 @@ import re
 SUBS = [
     (r"\\documentclass\[preprint,authoryear,3p,times\]\{elsarticle\}",
      r"\\documentclass[preprint,number,sort&compress,3p,times]{elsarticle}"),
-    (r"\\journal\{European Journal of Operational Research\}",
      r"\\journal{Socio-Economic Planning Sciences}"),
     (r"\\bibliographystyle\{elsarticle-harv\}",
      r"\\bibliographystyle{elsarticle-num-names}"),
