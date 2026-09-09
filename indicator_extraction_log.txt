@@ -1,0 +1,101 @@
+INDICATOR EXTRACTION LOG
+Task: Country-level indicators for tariff policy / supply-chain resilience paper
+Run date (UTC): 2026-09-01
+Retrieval tool: WebFetch (all retrieval; bash/curl network disabled per task instructions)
+Countries requested throughout: USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN
+Date window: 2015:2024, per_page=600
+
+=== SOURCE 1: World Bank Indicators API ===
+
+[1] TM.TAX.MRCH.SM.AR.ZS  (Tariff rate, applied, simple mean, all products %)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/TM.TAX.MRCH.SM.AR.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    Attempt 2: SUCCESS - 98 non-null observations returned, 2015-2022 coverage (varies by country)
+
+[2] TM.TAX.MRCH.WM.AR.ZS  (Tariff rate, applied, weighted mean, all products %)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/TM.TAX.MRCH.WM.AR.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    (not individually retried — retried later per-indicator, see below)
+    Retry: SUCCESS - 98 non-null observations returned
+
+[3] TM.TAX.MRCH.SM.FN.ZS  (Tariff rate, MFN, simple mean, all products %)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/TM.TAX.MRCH.SM.FN.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    Attempt 2: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    Attempt 3: SUCCESS - 98 non-null observations returned
+
+[4] TM.TAX.MANF.SM.AR.ZS  (Tariff rate, applied, simple mean, manufactured products %)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/TM.TAX.MANF.SM.AR.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    (part of same initial batch as [1]-[4]; retried below)
+    Retry: SUCCESS - 98 non-null observations returned
+
+[diagnostic] NY.GDP.MKTP.CD, USA only, date=2022:2022, no per_page param
+    URL: https://api.worldbank.org/v2/country/USA/indicator/NY.GDP.MKTP.CD?format=json&date=2022:2022
+    Attempt 1: FAILED - SERVER_ERROR, "Read timeout while fetching the URL"
+    Attempt 2: SUCCESS - confirmed API reachable; USA 2022 GDP = 26,054,614,000,000 current US$
+    (Run to diagnose whether timeouts were API-side or payload-size related, after the first
+    four full multi-country calls all timed out. Root cause undetermined; large multi-country/
+    multi-year payloads appear more timeout-prone but eventually succeeded on retry with no
+    change to the request.)
+
+[5] NE.IMP.GNFS.ZS  (Imports of goods and services, % of GDP)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/NE.IMP.GNFS.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 140 non-null observations returned, 2015-2024 full coverage all 14 areas
+
+[6] NE.EXP.GNFS.ZS  (Exports of goods and services, % of GDP)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/NE.EXP.GNFS.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 140 non-null observations returned, 2015-2024 full coverage all 14 areas
+
+[7] NY.GDP.MKTP.CD  (GDP, current US$) — full multi-country/multi-year pull
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/NY.GDP.MKTP.CD?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 140 non-null observations returned, 2015-2024 full coverage all 14 areas
+
+[8] NV.IND.MANF.ZS  (Manufacturing, value added, % of GDP)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/NV.IND.MANF.ZS?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 135 non-null observations returned (Canada missing 2023-2024; USA missing 2022-2024)
+
+[9] LP.LPI.OVRL.XQ  (Logistics Performance Index, overall score)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/LP.LPI.OVRL.XQ?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 42 non-null observations returned (LPI is a biennial-ish survey: only 2016,
+    2018, 2022 populated for these countries in this window; no 2020 or 2024 round data returned)
+
+[10] EN.GHG.CO2.PC.CE.AR5  (CO2 emissions per capita, AR5 GHG series, t CO2e/capita)
+    URL: https://api.worldbank.org/v2/country/USA;CHN;IND;EUU;VNM;MEX;JPN;KOR;THA;IDN;MYS;BRA;DEU;CAN/indicator/EN.GHG.CO2.PC.CE.AR5?format=json&date=2015:2024&per_page=600
+    Attempt 1: SUCCESS - 140 non-null observations returned, 2015-2024 full coverage all 14 areas
+    Fallback indicator EN.ATM.CO2E.PC was NOT NEEDED — primary code EN.GHG.CO2.PC.CE.AR5 worked
+    on the first attempt and returned a full, valid, non-error dataset.
+
+SOURCE 1 SUMMARY: All 10 requested World Bank indicator codes worked. No fallback indicator
+codes were required. Several calls needed 1-3 retries due to transient read timeouts on the
+World Bank API (not 429s — no rate-limit wait was triggered); no calls returned a WTO/WB
+API error payload (code 175 "Invalid value" etc.).
+
+=== SOURCE 2: WTO World Tariff Profiles ===
+
+URL: https://www.wto.org/english/res_e/statis_e/tariff_profiles_list_e.htm
+    Attempt 1: FAILED - PROVENANCE_REQUIRED: "The permission request for this URL was not
+    answered in time. Ask the user to approve the fetch or include the URL in a message,
+    then try again."
+    Attempt 2: FAILED - identical PROVENANCE_REQUIRED error
+    Attempt 3: FAILED - identical PROVENANCE_REQUIRED error
+RESULT: Not retrieved. No WTO tariff-profile data obtained. See context_sources.md for full
+detail. This is a tool-side approval gate, not a WTO server-side failure.
+
+=== SOURCE 3: UNCTAD ===
+
+URL: https://unctad.org/topic/trade-analysis/tariffs
+    Attempt 1: FAILED - PROVENANCE_REQUIRED (same message as above)
+RESULT: Not retrieved.
+
+URL: https://unctad.org/topic/trade-analysis/tariffs/tariff-dashboard
+    Attempt 1: FAILED - PROVENANCE_REQUIRED (same message as above)
+RESULT: Not retrieved. See context_sources.md for full detail.
+
+=== SOURCE 4: Capital city coordinates ===
+
+Not fetched, per task instructions ("Do NOT fetch this"). Coordinates recorded from
+standard published references (CIA World Factbook / GeoNames-consistent capital-city
+coordinates) directly into capital_coordinates.csv. See that file's `source` column.
+
+=== END OF LOG ===

@@ -1,0 +1,27 @@
+reporter_iso3,partner_iso3,product_group,year,indicator,value,unit,source_url,retrieved_utc
+usa,chn,Total,2022,XPRT-TRD-VL,153837022.415,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,mex,Total,2022,XPRT-TRD-VL,324377768.936,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,can,Total,2022,XPRT-TRD-VL,354887051.264,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,jpn,Total,2022,XPRT-TRD-VL,80304526.177,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,kor,Total,2022,XPRT-TRD-VL,71469488.662,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,deu,Total,2022,XPRT-TRD-VL,72549705.243,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,vnm,Total,2022,XPRT-TRD-VL,11398113.401,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,ind,Total,2022,XPRT-TRD-VL,47332140.044,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,tha,Total,2022,XPRT-TRD-VL,15592499.436,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,mys,Total,2022,XPRT-TRD-VL,18102781.829,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,idn,Total,2022,XPRT-TRD-VL,9986092.498,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,sgp,Total,2022,XPRT-TRD-VL,46163161.050,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+usa,wld,Total,2022,XPRT-TRD-VL,2062089832.731,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/usa/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,chn,Total,2022,XPRT-TRD-VL,15084400.60,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,usa,Total,2022,XPRT-TRD-VL,80230193.28,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,kor,Total,2022,XPRT-TRD-VL,7497725.95,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,jpn,Total,2022,XPRT-TRD-VL,5699961.76,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,deu,Total,2022,XPRT-TRD-VL,10441962.73,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,vnm,Total,2022,XPRT-TRD-VL,5880777.70,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,tha,Total,2022,XPRT-TRD-VL,6039394.51,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,mys,Total,2022,XPRT-TRD-VL,7190534.57,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,idn,Total,2022,XPRT-TRD-VL,9866613.66,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,sgp,Total,2022,XPRT-TRD-VL,11830795.24,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,mex,Total,2022,XPRT-TRD-VL,4938766.07,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,can,Total,2022,XPRT-TRD-VL,4251365.83,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01
+ind,wld,Total,2022,XPRT-TRD-VL,452684213.65,USD thousand,https://wits.worldbank.org/API/V1/SDMX/V21/datasource/tradestats-trade/reporter/ind/year/2022/partner/all/product/Total/indicator/XPRT-TRD-VL,2026-09-01

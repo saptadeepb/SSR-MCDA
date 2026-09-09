@@ -1,0 +1,122 @@
+TARIFF EXTRACTION LOG
+Source: World Bank WITS/UNCTAD-TRAINS SDMX API (datasource TRN)
+Products (HS6, all calls): 854231;854232;300490;300420;850760;870380;720839;721049
+Run started (UTC): 2026-09-01 ~05:20
+Run halted (UTC): 2026-09-01 05:36 — WebFetch tool returned a hard session-level
+  limit ("You've hit your session limit - resets 7:30am (UTC)") that blocked ALL
+  further WebFetch calls, including to an unrelated control URL (https://example.com),
+  confirming the limit is on the tool itself, not the WITS API. The reset time
+  (7:30am UTC) was ~114 minutes away at the point of failure, which made completing
+  the remainder of the extraction plan impossible within this task run.
+
+Format per line: [seq] URL -> outcome
+
+=== YEAR 2018, datatype=reported (all 12 reporters) ===
+[01] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/840/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (United States)
+[02] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/156/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (China)
+[03] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/356/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (India)
+[04] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/918/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (European Union)
+[05] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/704/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Viet Nam)
+[06] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/484/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 7 observations returned (Mexico) — product 870380 (electric-only vehicles) NOT present in response; treated as missing, not zero.
+[07] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/392/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Japan) — all rates 0
+[08] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/410/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Korea Rep.)
+[09] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/764/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Thailand)
+[10] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/360/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Indonesia)
+[11] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/458/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Malaysia)
+[12] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/76/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> HTTP 400 client error (Brazil, reporter code "76" without leading zero)
+[12b] RETRY https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/076/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2018/datatype/reported -> 8 observations returned (Brazil) — reporter code needed zero-padding to "076" for this API; "76" is rejected with HTTP 400. NOTE for future calls: use "076" for Brazil.
+
+=== YEAR 2022, datatype=reported ===
+[13] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/840/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> 8 observations returned (United States)
+[14] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/156/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> 8 observations returned (China)
+[15] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/356/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> FAILED first attempt (parallel batch): tool error "You've hit your session limit - resets 7:30am (UTC)"
+[15b] RETRY (standalone call) same URL -> 8 observations returned (India)
+[16] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/918/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> 8 observations returned (European Union)
+[17] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/704/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> 8 observations returned (Viet Nam)
+[18] https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/484/partner/000/product/854231%3B854232%3B300490%3B300420%3B850760%3B870380%3B720839%3B721049/year/2022/datatype/reported -> FAILED: tool error "You've hit your session limit - resets 7:30am (UTC)"
+[18b] RETRY x2 -> both FAILED, same tool session-limit error. Mexico 2022 NOT retrieved.
+[19] https://example.com (control probe, unrelated site) -> FAILED, same tool session-limit error, confirming the WebFetch tool itself is blocked, not the WITS API or this specific query.
+
+=== NOT ATTEMPTED — extraction halted before these could run (tool blocked) ===
+Year 2022, datatype=reported, reporters NOT YET CALLED:
+  392 (Japan), 410 (Korea Rep.), 764 (Thailand), 360 (Indonesia), 458 (Malaysia), 076 (Brazil)
+Years 2023 and 2024, datatype=reported, reporters 840 (US), 356 (India), 156 (China), 918 (EU):
+  none of these 8 calls were made.
+datatype=aveestimated, year 2022, all 12 reporters:
+  none of these 12 calls were made.
+
+Total WebFetch calls attempted: 21 (17 succeeded incl. 2 retries that succeeded, 1 hard client
+  error requiring a reporter-code fix, 3 blocked by the tool session limit, plus 1 control probe
+  also blocked).
+Total observations captured: 135 (95 for 2018 across all 12 reporters minus 1 missing cell for
+  Mexico/870380; 40 for 2022 across 5 reporters: US, China, India, EU, Viet Nam).
+
+RECOMMENDATION: Resume extraction after 2026-09-01 07:30 UTC, starting from item [18] (Mexico
+2022), then complete the remaining 2022 reporters, the 2023/2024 extra-year calls for
+US/India/China/EU, and the aveestimated/2022 batch for all 12 reporters. Use reporter code
+"076" (not "76") for Brazil in all future calls.
+
+=== RESUMED RUN (UTC 2026-09-01, after rate-limit reset) ===
+
+--- TASK 1: YEAR 2022, datatype=reported, 7 missing reporters ---
+[R01] reporter/484 (Mexico) year/2022 reported -> 8 observations returned
+[R02] reporter/392 (Japan) year/2022 reported -> 8 observations returned (all rates 0)
+[R03] reporter/410 (Korea Rep.) year/2022 reported -> 8 observations returned
+[R04] reporter/764 (Thailand) year/2022 reported -> Read timeout; RETRY -> 8 observations returned
+[R05] reporter/360 (Indonesia) year/2022 reported -> 8 observations returned
+[R06] reporter/458 (Malaysia) year/2022 reported -> 8 observations returned
+[R07] reporter/076 (Brazil) year/2022 reported -> 8 observations returned
+Task 1 complete: 56/56 observations captured, 0 missing.
+
+--- TASK 2: YEARS 2023 and 2024, datatype=reported, reporters 840/356/156/918 ---
+[R08] reporter/840 year/2023 reported -> 8 observations returned
+[R09] reporter/840 year/2024 reported -> HTTP 404 (no TRAINS data published for 2024) -> recorded as MISSING, not zero
+[R10] reporter/356 year/2023 reported -> 8 observations returned
+[R11] reporter/356 year/2024 reported -> HTTP 404 -> MISSING
+[R12] reporter/156 year/2023 reported -> 8 observations returned
+[R13] reporter/156 year/2024 reported -> HTTP 404 -> MISSING
+[R14] reporter/918 year/2023 reported -> 8 observations returned
+[R15] reporter/918 year/2024 reported -> HTTP 404 -> MISSING
+CONCLUSION: latest available TRAINS year for US, India, China, EU is 2023; 2024 not yet published in TRAINS as of this extraction (2026-09-01).
+Task 2 complete: 32/32 observations for 2023; 2024 confirmed absent for all 4 reporters (consistent 404, not a fluke).
+
+--- TASK 3: YEAR 2022, datatype=aveestimated (AHS effectively-applied estimates), all 12 reporters ---
+[R16] reporter/840 year/2022 aveestimated -> Read timeout x2, RETRY succeeded -> 8 observations, tariff_type returned as "MFN" (identical values to datatype=reported; no non-ad-valorem lines to convert)
+[R17] reporter/156 year/2022 aveestimated -> Read timeout x3, RETRY succeeded -> 8 observations, tariff_type "MFN", values identical to reported
+[R18] reporter/356 year/2022 aveestimated -> 8 observations, tariff_type "MFN", values identical to reported
+[R19] reporter/918 year/2022 aveestimated -> Read timeout x1, RETRY succeeded -> 8 observations, tariff_type "MFN", identical to reported
+[R20] reporter/704 (Viet Nam) year/2022 aveestimated -> HTTP 404 -> MISSING (no AVE-estimated series published for Viet Nam in TRAINS for this product/year)
+[R21] reporter/484 year/2022 aveestimated -> 8 observations, identical to reported
+[R22] reporter/392 year/2022 aveestimated -> 8 observations, identical to reported
+[R23] reporter/410 year/2022 aveestimated -> 8 observations, identical to reported
+[R24] reporter/764 year/2022 aveestimated -> 8 observations, identical to reported
+[R25] reporter/360 year/2022 aveestimated -> 8 observations, identical to reported
+[R26] reporter/458 year/2022 aveestimated -> 8 observations, identical to reported
+[R27] reporter/076 (Brazil) year/2022 aveestimated -> HTTP 404 -> MISSING
+DATA QUALITY NOTE: for all 10 reporters where aveestimated returned data, every value (rate, lines, min, max) is numerically identical to the corresponding datatype=reported row, and the API/tool labeled tariff_type "MFN" rather than an AHS-specific label. This is consistent with AVE-estimation only altering rates on non-ad-valorem (specific/compound) duty lines, none of which appear among these 8 product lines for these reporters -- but it could NOT be independently confirmed that the API differentiates aveestimated from reported for this product set, since the extraction relies on WebFetch's summarization rather than raw SDMX-JSON. Recorded as retrieved data, not fabricated, but flagged as a possible false-precision / duplicate-series risk in the coverage report.
+Task 3 complete: 80/96 observations captured (10 of 12 reporters); Viet Nam and Brazil have no aveestimated series (404) -> recorded as missing.
+
+--- TASK 4: PREFERENTIAL (partner-specific) rates ---
+US (reporter 840), product/year/datatype held fixed at 2022/reported, varying partner:
+[R28] partner/484 (Mexico) -> HTTP 404
+[R29] partner/124 (Canada) -> HTTP 404
+[R30] partner/704 (Viet Nam) -> HTTP 404
+[R31] partner/410 (Korea Rep.) -> HTTP 404
+[R32] partner/156 (China) -> HTTP 404
+[R33] partner/356 (India) -> HTTP 404
+India (reporter 356), 2022/reported, varying partner:
+[R34] partner/156 (China) -> HTTP 404
+[R35] partner/840 (United States) -> HTTP 404
+[R36] partner/704 (Viet Nam) -> HTTP 404
+[R37] partner/392 (Japan) -> HTTP 404
+[R38] partner/410 (Korea Rep.) -> HTTP 404
+[R39] partner/764 (Thailand) -> HTTP 404
+[R40 - diagnostic, not part of the 12] reporter/484 (Mexico) partner/840 (United States) 2022/reported -> HTTP 404, confirming the 404 is systematic to non-"000" partner values on this datasource/product-list combination, not specific to reporter 840 or 356.
+RESULT: All 12 requested partner-specific (preferential) queries returned HTTP 404. No preferential/PRF or bilateral MFN observations were retrieved. This indicates the WITS TRN SDMX datasource, at least via this endpoint shape and for this exact product/year combination, does not expose partner-disaggregated tariff schedules the way the aggregate (partner=000) query does -- consistent with TRAINS partner-level tariff data typically requiring bilateral-preferential extracts to have both a valid partner AND an underlying preferential agreement AND possibly a different resource path than the reported/aveestimated aggregate used here. Recorded as a hard data gap, not fabricated.
+Task 4 complete: 0/12 preferential observations retrieved; all 12 (+1 diagnostic) attempts returned HTTP 404 and are logged as MISSING.
+
+--- SESSION TOTALS (resumed run) ---
+WebFetch calls made: 48 (30 successful table returns; several read-timeouts resolved by same-URL retry per instructions; remainder confirmed HTTP 404 "no data" outcomes: 4 for year 2024, 2 for aveestimated Viet Nam/Brazil, 13 for preferential incl. 1 diagnostic).
+New observations appended to raw_tariffs_hs6.csv: 56 (Task1, 2022 reported) + 32 (Task2, 2023 reported) + 80 (Task3, 2022 aveestimated) = 168.
+raw_tariffs_preferential.csv created with header only: all 12 preferential queries returned no data, so 0 data rows were written (no fabricated preferential rates).
+Run completed (UTC): 2026-09-01.
